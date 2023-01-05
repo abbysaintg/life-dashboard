@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Box, IconButton, useTheme, TextField } from '@mui/material'
+import { tokens } from '../../theme'
+import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 
 function NewTaskForm({ categories, newTaskSubmit }) {
-
+    const theme = useTheme()
+    const colors = tokens(theme.palette.mode)
     const [newTask, setNewTask] = useState({
         text: '',
         category: 'All',

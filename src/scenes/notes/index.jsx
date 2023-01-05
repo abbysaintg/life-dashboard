@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Box, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
-import Header from '../../components/Header'
+import Header from '../global/Header'
 import Note from './Note'
 import NoteSearch from './NoteSearch'
 import NoteForm from './NoteForm'

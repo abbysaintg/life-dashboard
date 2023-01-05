@@ -95,10 +95,6 @@ const Sidebar = () => {
                     {/* MENU ITEMS */}
                     <Box paddingLeft={isCollapsed ? undefined : '10%'}>
                         <Item title='Dashboard' to='/' icon={<HomeOutlinedIcon />} selected={selected} setSelected={setSelected} />
-
-                        {/* <Typography variant='h6' color={colors.grey[300]} sx={{ m: '15px 0 5px 20px' }}>
-                            Section
-                        </Typography> */}
                         <Item title='Calendar' to='/calendar' icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Tasks' to='/tasks' icon={<TaskAltOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Notes' to='/notes' icon={<CreateOutlinedIcon />} selected={selected} setSelected={setSelected} />
