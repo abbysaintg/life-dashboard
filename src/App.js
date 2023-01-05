@@ -5,10 +5,10 @@ import Topbar from './scenes/global/Topbar'
 import Sidebar from './scenes/global/Sidebar'
 import Dashboard from './scenes/dashboard'
 // import Calendar from './scenes/Calendar'
-// import Tasks from './scenes/Tasks'
-// import Notes from './scenes/Notes'
+import Tasks from './scenes/tasks'
+import Notes from './scenes/notes'
 // import Bookmarks from './scenes/Bookmarks'
-// import Contacts from './scenes/Contacts'
+import Contacts from './scenes/contacts'
 // import Budget from './scenes/Budget'
 
 function App() {
@@ -25,10 +25,10 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Dashboard />} />
                             {/* <Route path='/calendar' element={<Calendar />} /> */}
-                            {/* <Route path='/tasks' element={<Tasks />} /> */}
-                            {/* <Route path='/notes' element={<Notes />} /> */}
+                            <Route path='/tasks' element={<Tasks />} />
+                            <Route path='/notes' element={<Notes />} />
                             {/* <Route path='/bookmarks' element={<Bookmarks />} /> */}
-                            {/* <Route path='/contacts' element={<Contacts />} /> */}
+                            <Route path='/contacts' element={<Contacts />} />
                             {/* <Route path='/budget' element={<Budget />} /> */}
                         </Routes>
                     </main>

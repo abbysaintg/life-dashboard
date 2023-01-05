@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "grocery shopping",
+      "category": "Food"
+    },
+    {
+      "id": 2,
+      "text": "pay bills",
+      "category": "Money"
+    },
+    {
+      "id": 3,
+      "text": "finish project",
+      "category": "Code"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": 1,
+      "url": "https://www.google.com",
+      "name": "Google"
+    },
+    {
+      "id": 2,
+      "url": "https://learning.flatironschool.com/",
+      "name": "Flatiron"
+    },
+    {
+      "id": 3,
+      "url": "https://www.wellsfargo.com/",
+      "name": "Bank"
+    }
+  ],
+  "notes": [
+    {
+      "id": 2,
+      "text": "Don't forget to call mom!",
+      "date": "01/02/2023"
+    },
+    {
+      "id": 3,
+      "text": "next week is Dan's birthday",
+      "date": "01/03/2023"
+    },
+    {
+      "text": "Surprise party! \n- Location\n- Cake\n- Present\n- Invites \n- Don't give away the surprise!",
+      "date": "1/5/2023",
+      "id": 5
+    },
+    {
+      "text": "Cake recipe: \n1 cup white sugar\n½ cup unsalted butter\n2 large eggs\n2 teaspoons vanilla extract\n1 ½ cups all-purpose flour\n1 ¾ teaspoons baking powder\n½ cup milk",
+      "date": "1/5/2023",
+      "id": 6
+    }
+  ]
+}
