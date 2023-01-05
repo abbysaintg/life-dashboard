@@ -1,6 +1,7 @@
 import { Box, IconButton, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined'
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined'
 
 function Note({ note, handleNoteDelete }) {
     const theme = useTheme()
@@ -27,10 +28,10 @@ function Note({ note, handleNoteDelete }) {
                 minHeight: 200,
                 maxWidth: 300,
                 maxHeight: 300,
-                backgroundColor: colors.blueAccent[700],
-                // '&:hover': {
-                //     backgroundColor: colors.greenAccent[200],
-                // },
+                backgroundColor: colors.greenAccent[800],
+                '&:hover': {
+                    backgroundColor: colors.greenAccent[700],
+                },
             }}>
             <span>{note.text}</span>
             <Box
@@ -40,9 +41,14 @@ function Note({ note, handleNoteDelete }) {
                     justifyContent: 'space-between',
                 }}>
                 <small>{note.date}</small>
-                <IconButton type='button' sx={{ p: 1 }} onClick={handleDeleteClick}>
-                    <DeleteOutlineOutlinedIcon />
-                </IconButton>
+                <div>
+                    <IconButton type='button' sx={{ p: 1 }}>
+                        <CreateOutlinedIcon />
+                    </IconButton>
+                    <IconButton type='button' sx={{ p: 1 }} onClick={handleDeleteClick}>
+                        <DeleteOutlineOutlinedIcon />
+                    </IconButton>
+                </div>
             </Box>
         </Box>
     )

@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Box, useTheme } from '@mui/material'
-import { tokens } from '../../theme'
+import { tokens } from '../../../../theme'
 import TaskFilter from './TaskFilter'
 import TaskForm from './TaskForm'
 import Task from './Task'
-import Header from '../global/Header'
 import { CATEGORIES } from './categories.js'
 
 const Tasks = () => {
@@ -35,17 +34,15 @@ const Tasks = () => {
     const tasksToDisplay = tasks.filter((task) => task.category === selectedCategory || selectedCategory === 'All')
 
     return (
-        <Box m='20px'>
-            <Header title='NOTES' subtitle='My notes' />
-            <Box>
-                <TaskFilter categories={CATEGORIES} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-                <TaskForm categories={CATEGORIES} newTaskSubmit={newTaskSubmit} />
-                <Box backgroundColor={colors.primary[400]} width='400px' mt="30px">
-                    {tasksToDisplay.map((task) => (
-                        <Task key={task.id} task={task} handleTaskDelete={handleTaskDelete} />
-                    ))}
-                </Box>
-            </Box>
+        <Box
+            sx={{
+                // display: 'flex',
+            }}>
+            <TaskFilter categories={CATEGORIES} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+            {tasksToDisplay.map((task) => (
+                <Task key={task.id} task={task} handleTaskDelete={handleTaskDelete} />
+            ))}
+            <TaskForm categories={CATEGORIES} newTaskSubmit={newTaskSubmit} />
         </Box>
     )
 }

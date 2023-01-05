@@ -43,7 +43,7 @@ const Notes = () => {
     return (
         <Box m="20px">
             <Header title='NOTES' subtitle='My notes' />
-            <Box>
+            <Box mt="30px">
                 <NoteSearch setSearchTerm={setSearchTerm} />
                 <Box sx={{
                     marginTop: "20px",

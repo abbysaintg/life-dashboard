@@ -45,12 +45,12 @@ function NoteForm({ newNoteSubmit }) {
                 minHeight: 200,
                 maxWidth: 300,
                 maxHeight: 300,
-                backgroundColor: colors.blueAccent[700],
-                // '&:hover': {
-                //     backgroundColor: colors.greenAccent[200],
-                // },
+                backgroundColor: colors.greenAccent[800],
+                '&:hover': {
+                    backgroundColor: colors.greenAccent[700],
+                },
             }}>
-            <TextField value={noteText} onChange={handleChange} label='New Note' variant='outlined' multiline rows={5}></TextField>
+            <TextField value={noteText} onChange={handleChange} label='New Note' variant='filled' multiline rows={5}></TextField>
             <Box
                 sx={{
                     display: 'flex',

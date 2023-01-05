@@ -5,7 +5,7 @@ import Topbar from './scenes/global/Topbar'
 import Sidebar from './scenes/global/Sidebar'
 import Dashboard from './scenes/dashboard'
 import Calendar from './scenes/calendar'
-import Tasks from './scenes/tasks'
+// import Tasks from './scenes/tasks'
 import Notes from './scenes/notes'
 // import Bookmarks from './scenes/Bookmarks'
 import Contacts from './scenes/contacts'
@@ -25,7 +25,7 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Dashboard />} />
                             <Route path='/calendar' element={<Calendar />} />
-                            <Route path='/tasks' element={<Tasks />} />
+                            {/* <Route path='/tasks' element={<Tasks />} /> */}
                             <Route path='/notes' element={<Notes />} />
                             {/* <Route path='/bookmarks' element={<Bookmarks />} /> */}
                             <Route path='/contacts' element={<Contacts />} />

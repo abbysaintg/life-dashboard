@@ -10,7 +10,7 @@ import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined'
-import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined'
+// import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined'
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined'
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined'
 
@@ -96,7 +96,7 @@ const Sidebar = () => {
                     <Box paddingLeft={isCollapsed ? undefined : '10%'}>
                         <Item title='Dashboard' to='/' icon={<HomeOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Calendar' to='/calendar' icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title='Tasks' to='/tasks' icon={<TaskAltOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        {/* <Item title='Tasks' to='/tasks' icon={<TaskAltOutlinedIcon />} selected={selected} setSelected={setSelected} /> */}
                         <Item title='Notes' to='/notes' icon={<CreateOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Bookmarks' to='/bookmarks' icon={<BookmarkBorderOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         <Item title='Contacts' to='/contacts' icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected} />

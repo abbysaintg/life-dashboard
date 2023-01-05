@@ -1,8 +1,9 @@
-import { Box, useTheme } from '@mui/material'
+import { Box, IconButton, useTheme, TextField } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 import { tokens } from '../../theme'
 import { contactsData } from '../../data/contactsData'
 import Header from '../global/Header'
+import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 
 const Contacts = () => {
     const theme = useTheme()
@@ -17,8 +18,9 @@ const Contacts = () => {
     ]
 
     return (
-        <Box m="20px">
+        <Box m='20px'>
             <Header title='CONTACTS' subtitle='My Contacts List' />
+
             <Box
                 m='40px 0 0 0'
                 height='75vh'
@@ -33,7 +35,7 @@ const Contacts = () => {
                         color: colors.greenAccent[300],
                     },
                     '& .MuiDataGrid-columnHeaders': {
-                        backgroundColor: colors.blueAccent[700],
+                        backgroundColor: colors.greenAccent[800],
                         borderBottom: 'none',
                     },
                     '& .MuiDataGrid-virtualScroller': {
@@ -41,7 +43,7 @@ const Contacts = () => {
                     },
                     '& .MuiDataGrid-footerContainer': {
                         borderTop: 'none',
-                        backgroundColor: colors.blueAccent[700],
+                        backgroundColor: colors.greenAccent[800],
                     },
                     '& .MuiCheckbox-root': {
                         color: `${colors.greenAccent[200]} !important`,

@@ -16,9 +16,14 @@
       "category": "Code"
     },
     {
-      "text": "test",
-      "category": "Code",
+      "text": "make dinner",
+      "category": "Food",
       "id": 4
+    },
+    {
+      "text": "study ruby",
+      "category": "Code",
+      "id": 6
     }
   ],
   "bookmarks": [
@@ -58,6 +63,21 @@
       "text": "Cake recipe: \n1 cup white sugar\n½ cup unsalted butter\n2 large eggs\n2 teaspoons vanilla extract\n1 ½ cups all-purpose flour\n1 ¾ teaspoons baking powder\n½ cup milk",
       "date": "1/5/2023",
       "id": 6
+    },
+    {
+      "text": "HELLO WORLD",
+      "date": "1/5/2023",
+      "id": 7
+    },
+    {
+      "text": "Future Features: \n- edit note\n- edit task \n- budget spreadsheet that updates amount on dashboard",
+      "date": "1/5/2023",
+      "id": 8
+    },
+    {
+      "text": "drag and drop feature for tasks and notes would be great!",
+      "date": "1/5/2023",
+      "id": 9
     }
   ]
 }
