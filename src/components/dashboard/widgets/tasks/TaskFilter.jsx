@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, useTheme } from '@mui/material'
+import { Box, Button, useTheme } from '@mui/material'
 import { tokens } from '../../../../theme'
 
 function TaskFilter({ categories, selectedCategory, setSelectedCategory }) {

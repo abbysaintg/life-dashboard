@@ -6,8 +6,8 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import listPlugin from '@fullcalendar/list'
 import { Box, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material'
-import Header from '../global/Header'
-import { tokens } from '../../theme'
+import Header from './global/Header'
+import { tokens } from '../theme'
 
 const Calendar = () => {
     const theme = useTheme()
@@ -27,7 +27,7 @@ const Calendar = () => {
             .then((data) => setCurrentEvents(data))
     }, [])
 
-    // RENDER EVENTS TO CALENDAR 
+    // RENDER EVENTS TO CALENDAR
     const renderEventContent = (eventInfo) => {
         return (
             <Typography variant='h5' fontWeight='600' textAlign='center'>
@@ -40,16 +40,32 @@ const Calendar = () => {
     const handleDateClick = (selected) => {
         const title = prompt('Event Title:')
         const calendarApi = selected.view.calendar
+        const newEvent = {
+            id: `${selected.dateStr}-${title}`,
+            title,
+            date: selected.dateStr,
+        }
         calendarApi.unselect()
 
         if (title) {
             calendarApi.addEvent({
                 id: `${selected.dateStr}-${title}`,
                 title,
-                start: selected.startStr,
-                end: selected.endStr,
-                allDay: selected.allDay,
+                date: selected.dateStr,
             })
+
+            fetch('http://localhost:3001/events', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(newEvent),
+            })
+                .then((resp) => resp.json())
+                .then((data) => {
+                    setCurrentEvents([...currentEvents, data])
+                })
         }
     }
 
@@ -57,6 +73,16 @@ const Calendar = () => {
     const handleEventClick = (selected) => {
         if (window.confirm(`Confirm delete '${selected.event.title}'`)) {
             selected.event.remove()
+
+            fetch(`http://localhost:3001/events/${selected.event.id}`, {
+                method: 'DELETE',
+            })
+                .then((resp) => resp.json())
+                .then((data) => {
+                    console.log(data)
+                })
+
+            setCurrentEvents(currentEvents.filter((event) => event.id !== selected.event.id))
         }
     }
 
@@ -81,7 +107,7 @@ const Calendar = () => {
                                     primary={event.title}
                                     secondary={
                                         <Typography>
-                                            {formatDate(event.start, {
+                                            {formatDate(event.date, {
                                                 year: 'numeric',
                                                 month: 'short',
                                                 day: 'numeric',
@@ -110,7 +136,7 @@ const Calendar = () => {
                         selectable={true}
                         selectMirror={true}
                         dayMaxEvents={true}
-                        onDateClick={handleDateClick}
+                        dateClick={handleDateClick}
                         onEventClick={handleEventClick}
                         eventContent={renderEventContent}
                         eventClick={handleEventClick}

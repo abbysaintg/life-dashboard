@@ -1,9 +1,8 @@
-import { Box, IconButton, useTheme, TextField } from '@mui/material'
+import { Box, useTheme } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
-import { tokens } from '../../theme'
-import { contactsData } from '../../data/contactsData'
-import Header from '../global/Header'
-import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
+import { tokens } from '../theme'
+import { contactsData } from '../data/contactsData'
+import Header from './global/Header'
 
 const Contacts = () => {
     const theme = useTheme()

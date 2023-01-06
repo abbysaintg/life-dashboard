@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box, Button, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../../theme'
 
 function CountdownTimer() {
@@ -37,19 +37,19 @@ function CountdownTimer() {
                 Countdown
             </Typography>
             <Box display="flex" justifyContent="space-between">
-                    <Typography variant='h5' p="10px 10px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+                    <Typography variant='h5' p="13px 10px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                         <div>{days}</div>
                         <div>days</div>
                     </Typography >
-                    <Typography variant='h5' p="10px 10px" ml="5px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+                    <Typography variant='h5' p="13px 10px" ml="5px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                         <div>{hours}</div>
                         <div>hours</div>
                     </Typography>
-                    <Typography variant='h5' p="10px 10px" ml="5px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+                    <Typography variant='h5' p="13px 10px" ml="5px" mr="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                         <div>{minutes}</div>
                         <div>minutes</div>
                     </Typography>
-                    <Typography variant='h5' p="10px 10px" ml="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+                    <Typography variant='h5' p="13px 10px" ml="5px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                         <div>{seconds}</div>
                         <div>seconds</div>
                     </Typography>

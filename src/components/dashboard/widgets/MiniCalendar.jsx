@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { formatDate } from '@fullcalendar/core'
-import { Box, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material'
+import { Box, List, ListItem, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../../theme'
 
 const MiniCalendar = () => {
@@ -31,7 +31,7 @@ const MiniCalendar = () => {
                             borderRadius: '10px',
                         }}>
                         <Typography pr='10px' pl='10px' backgroundColor={colors.primary[400]} borderRadius='10px'>
-                            {formatDate(event.start, {
+                            {formatDate(event.date, {
                                 year: 'numeric',
                                 month: 'short',
                                 day: 'numeric',

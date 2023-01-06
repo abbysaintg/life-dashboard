@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Box, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../../theme'
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined'
 import WbCloudyOutlinedIcon from '@mui/icons-material/WbCloudyOutlined'

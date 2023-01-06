@@ -1,4 +1,5 @@
-import { Box, IconButton, Typography, useTheme } from '@mui/material'
+import { useState } from 'react'
+import { Box, Icon, IconButton, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
 import Header from '../global/Header'
 import Weather from './widgets/Weather'
@@ -7,17 +8,27 @@ import Countdown from './widgets/Countdown'
 import Shortcuts from './widgets/Shortcuts'
 import MiniCalendar from './widgets/MiniCalendar'
 import Quote from './widgets/Quote'
-import Tasks from './widgets/tasks'
+import Tasks from './widgets/tasks/Tasks'
+import LooksOneOutlinedIcon from '@mui/icons-material/LooksOneOutlined'
+import LooksTwoOutlinedIcon from '@mui/icons-material/LooksTwoOutlined'
+import Looks3OutlinedIcon from '@mui/icons-material/Looks3Outlined'
+import Looks4OutlinedIcon from '@mui/icons-material/Looks4Outlined'
 
 const Dashboard = () => {
     const theme = useTheme()
     const colors = tokens(theme.palette.mode)
 
+    const [srcUrl, setSrcUrl] = useState('https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM?utm_source=generator')
+
+    const changePlaylist = (url) => {
+        setSrcUrl(url)
+    }
+
     return (
-        <Box p='0px 20px 20px 20px'>
+        <Box p='0px 20px 20px 20px' className='box'>
             {/* HEADER */}
             <Box display='flex' justifyContent='space-between' alignItems='center'>
-                <Header title='DASHBOARD' subtitle='Landing page of sorts' />
+                <Header title='DASHBOARD' />
             </Box>
 
             {/* GRID & CHARTS */}
@@ -48,20 +59,31 @@ const Dashboard = () => {
                         Upcoming Events
                     </Typography>
                     <MiniCalendar />
-                    {/* <Box display='flex' flexDirection='column' alignItems='center' mt='25px'>
-                        <Typography variant='h5' color={colors.greenAccent[500]} sx={{ mt: '15px' }}>
-                            Coming Soon
-                        </Typography>
-                        <Typography>.........</Typography>
-                    </Box> */}
                 </Box>
-                <Box gridColumn='span 4' gridRow='span 4' backgroundColor={colors.primary[400]} overflow='auto'>
-                    <Box height='200px' p='15px' overflow='none'>
+                <Box gridColumn='span 4' gridRow='span 4' backgroundColor={colors.primary[400]} p='30px 15px'>
+                    <Typography variant='h5' fontWeight='600' textAlign='center'>
+                        Playlist
+                    </Typography>
+                    <Box m='10px' backgroundColor={colors.greenAccent[700]} borderRadius='5px' textAlign='center' width='40%' mx='auto'>
+                        <IconButton onClick={() => changePlaylist('https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM?utm_source=generator')}>
+                            <LooksOneOutlinedIcon fontSize='medium' />
+                        </IconButton>
+                        <IconButton onClick={() => changePlaylist('https://open.spotify.com/embed/playlist/37i9dQZEVXcGVGTpOpeT99?utm_source=generator')}>
+                            <LooksTwoOutlinedIcon fontSize='medium' />
+                        </IconButton>
+                        <IconButton onClick={() => changePlaylist('https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ?utm_source=generator')}>
+                            <Looks3OutlinedIcon fontSize='medium' />
+                        </IconButton>
+                        <IconButton onClick={() => changePlaylist('https://open.spotify.com/embed/playlist/37i9dQZF1DX5trt9i14X7j?utm_source=generator')}>
+                            <Looks4OutlinedIcon fontSize='medium' />
+                        </IconButton>
+                    </Box>
+                    <Box height='200px' overflow='none'>
                         <iframe
                             style={{ border: 0 }}
-                            src='https://open.spotify.com/embed/playlist/37i9dQZEVXcGVGTpOpeT99?utm_source=generator&theme=0'
+                            src={srcUrl}
                             width='100%'
-                            height='600px'
+                            height='495px'
                             allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
                             loading='lazy'></iframe>
                     </Box>
@@ -82,13 +104,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard
-
-{
-    /* <iframe
-src='https://open.spotify.com/embed/playlist/37i9dQZEVXcGVGTpOpeT99?utm_source=generator&theme=0'
-style={{ border: 0 }}
-width='100%'
-height='600px'
-allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
-loading='lazy'></iframe> */
-}

@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, IconButton, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../../theme'
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
@@ -16,7 +16,7 @@ const Shortcuts = () => {
             <Typography variant='h5' fontWeight='600' textAlign='center' color={colors.greenAccent[500]} pb='10px'>
                 Shortcuts
             </Typography>
-            <Box pt='10px' variant='h5' p="10px 10px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+            <Box pt='10px' variant='h5' p="13px 10px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                 <IconButton href='https://www.bankofamerica.com/' target='_blank'>
                     <AccountBalanceOutlinedIcon fontSize='large' />
                 </IconButton>
