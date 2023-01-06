@@ -8,7 +8,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined'
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
-import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined'
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined'
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined'
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined'
@@ -67,9 +67,7 @@ const Sidebar = () => {
                         }}>
                         {!isCollapsed && (
                             <Box display='flex' justifyContent='space-between' alignItems='center' ml='15px'>
-                                <Typography variant='h3' color={colors.grey[100]}>
-                                    
-                                </Typography>
+                                <Typography variant='h3' color={colors.grey[100]}></Typography>
                                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                                     <ArrowBackOutlinedIcon />
                                 </IconButton>
@@ -81,7 +79,7 @@ const Sidebar = () => {
                     {!isCollapsed && (
                         <Box mb='25px'>
                             <Box display='flex' justifyContent='center' alignItems='center'>
-                                <img alt='profile-user' width='100px' height='100px' src={`../../assets/user.png`} style={{ cursor: 'pointer', borderRadius: '50%' }} />
+                                <img alt='profile-user' width='100px' height='100px' src={`https://www.shareicon.net/data/128x128/2016/09/15/829452_user_512x512.png`} style={{ cursor: 'pointer', borderRadius: '50%' }} />
                             </Box>
                             <Box textAlign='center'>
                                 <Typography variant='h2' color={colors.grey[100]} fontWeight='bold' sx={{ m: '10px 0 0 0' }}>
@@ -93,7 +91,7 @@ const Sidebar = () => {
 
                     {/* MENU ITEMS */}
                     <Box paddingLeft={isCollapsed ? undefined : '10%'}>
-                        <Item title='Dashboard' to='/' icon={<HomeOutlinedIcon fontSize='large'/>} selected={selected} setSelected={setSelected} />
+                        <Item title='Dashboard' to='/' icon={<HomeOutlinedIcon fontSize='large' />} selected={selected} setSelected={setSelected} />
                         <Item title='Calendar' to='/calendar' icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         {/* <Item title='Tasks' to='/tasks' icon={<TaskAltOutlinedIcon />} selected={selected} setSelected={setSelected} /> */}
                         <Item title='Notes' to='/notes' icon={<CreateOutlinedIcon />} selected={selected} setSelected={setSelected} />

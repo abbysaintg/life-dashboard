@@ -88,7 +88,7 @@ const Calendar = () => {
 
     return (
         <Box m='20px'>
-            <Header title='Calendar' subtitle='My Personal Calendar' />
+            <Header title='CALENDAR' subtitle='My Personal Calendar' />
 
             <Box display='flex' justifyContent='space-between'>
                 {/* CALENDAR SIDEBAR */}

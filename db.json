@@ -11,11 +11,6 @@
       "category": "Money"
     },
     {
-      "id": 3,
-      "text": "finish project",
-      "category": "Code"
-    },
-    {
       "text": "make dinner",
       "category": "Food",
       "id": 4
@@ -29,6 +24,11 @@
       "text": "vacuum",
       "category": "Misc",
       "id": 7
+    },
+    {
+      "text": "present project",
+      "category": "Code",
+      "id": 8
     }
   ],
   "bookmarks": [

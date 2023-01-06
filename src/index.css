@@ -15,8 +15,8 @@ body,
     position: relative;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .box {
         grid-column: span 12;
     }
-}
+} */

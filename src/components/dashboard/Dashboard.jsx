@@ -19,16 +19,15 @@ const Dashboard = () => {
     const colors = tokens(theme.palette.mode)
 
     const [srcUrl, setSrcUrl] = useState('https://open.spotify.com/embed/playlist/37i9dQZF1DX0r3x8OtiwEM?utm_source=generator')
-
     const changePlaylist = (url) => {
         setSrcUrl(url)
     }
 
     return (
-        <Box p='0px 20px 20px 20px' className='box'>
+        <Box p='0px 20px 0px 20px'>
             {/* HEADER */}
             <Box display='flex' justifyContent='space-between' alignItems='center'>
-                <Header title='DASHBOARD' />
+                <Header title='DASHBOARD' subtitle='Welcome back!'/>
             </Box>
 
             {/* GRID & CHARTS */}
