@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Icon, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, IconButton, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
 import Header from '../global/Header'
 import Weather from './widgets/Weather'
