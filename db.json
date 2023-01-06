@@ -79,5 +79,37 @@
       "date": "1/5/2023",
       "id": 9
     }
-  ]
+  ], 
+  "events": [
+    {
+        "id": "1",
+        "title": "Project Presentation",
+        "start": "2023-01-06"
+    },
+    {
+        "id": "2",
+        "title": "Dan's Birthday",
+        "start": "2023-01-14"
+    },
+    {
+        "id": "3",
+        "title": "MLK Day",
+        "start": "2023-01-16"
+    },
+    {
+        "id": "4",
+        "title": "Groundhog Day",
+        "start": "2023-02-02"
+    },
+    {
+        "id": "5",
+        "title": "My Birthday",
+        "start": "2023-03-05"
+    },
+    {
+        "id": "6",
+        "title": "Flatiron Graduation",
+        "start": "2023-03-10"
+    }
+    ]
 }

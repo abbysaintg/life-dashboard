@@ -26,12 +26,7 @@ function Task({ task, handleTaskDelete }) {
                 backgroundColor: colors.greenAccent[800],
             }}>
             <Box display='flex'>
-                <Box
-                    p='10px'
-                    sx={{
-                        backgroundColor: colors.greenAccent[700],
-                        borderRadius: '10px',
-                    }}>
+                <Box p='10px' borderRadius="10px" backgroundColor={colors.greenAccent[700]} >
                     {task.category}
                 </Box>
                 <Box p='10px'>{task.text}</Box>

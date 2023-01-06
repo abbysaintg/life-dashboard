@@ -12,10 +12,13 @@ function TaskFilter({ categories, selectedCategory, setSelectedCategory }) {
                     <Button
                         key={category}
                         onClick={() => setSelectedCategory(category)}
-                        variant="contained"
+                        variant={"contained"}
+                        disabled={selectedCategory === category}
                         sx={{
                             borderRadius: '10px',
                             backgroundColor: colors.greenAccent[700],
+                            marginLeft: "5px", 
+                            marginRight: "5px"
                         }}>
                         {category}
                     </Button>

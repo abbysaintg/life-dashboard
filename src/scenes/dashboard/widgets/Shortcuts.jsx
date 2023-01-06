@@ -13,10 +13,10 @@ const Shortcuts = () => {
 
     return (
         <Box>
-            <Typography variant='h5' fontWeight='600' textAlign='center' color={colors.greenAccent[500]} pt='10px'>
+            <Typography variant='h5' fontWeight='600' textAlign='center' color={colors.greenAccent[500]} pb='10px'>
                 Shortcuts
             </Typography>
-            <Box pt='10px'>
+            <Box pt='10px' variant='h5' p="10px 10px" borderRadius='5px' backgroundColor={colors.primary[500]} textAlign='center'>
                 <IconButton href='https://www.bankofamerica.com/' target='_blank'>
                     <AccountBalanceOutlinedIcon fontSize='large' />
                 </IconButton>

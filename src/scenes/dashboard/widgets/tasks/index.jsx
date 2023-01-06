@@ -34,10 +34,7 @@ const Tasks = () => {
     const tasksToDisplay = tasks.filter((task) => task.category === selectedCategory || selectedCategory === 'All')
 
     return (
-        <Box
-            sx={{
-                // display: 'flex',
-            }}>
+        <Box>
             <TaskFilter categories={CATEGORIES} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
             {tasksToDisplay.map((task) => (
                 <Task key={task.id} task={task} handleTaskDelete={handleTaskDelete} />

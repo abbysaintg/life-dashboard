@@ -27,41 +27,43 @@ const Weather = () => {
 
     return (
         <Box>
-            <Typography variant='h5' fontWeight='600' textAlign='center' color={colors.greenAccent[500]} pt="10px">
+            <Typography variant='h5' fontWeight='600' textAlign='center' color={colors.greenAccent[500]} pb='10px'>
                 Current Weather
             </Typography>
-            <Typography variant='h3' fontWeight='600' textAlign='center' pt="10px">
-                {weather !== '' && <span>{weather.current_weather.temperature} °F</span>}
-            </Typography>
-            <Box textAlign='center' pt="10px">
-                {weathercode === 0 && <WbSunnyOutlinedIcon fontSize='large' />}
-                {weathercode === 1 && <WbSunnyOutlinedIcon fontSize='large' />}
-                {weathercode === 2 && <WbCloudyOutlinedIcon fontSize='large' />}
-                {weathercode === 3 && <WbCloudyOutlinedIcon fontSize='large' />}
-                {weathercode === 45 && <WbCloudyOutlinedIcon fontSize='large' />}
-                {weathercode === 48 && <WbCloudyOutlinedIcon fontSize='large' />}
-                {weathercode === 51 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 53 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 55 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 56 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 57 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 61 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 63 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 65 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 66 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 67 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 71 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 73 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 75 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 77 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 80 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 81 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 82 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 85 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 86 && <AcUnitOutlinedIcon fontSize='large' />}
-                {weathercode === 95 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 96 && <ThunderstormOutlinedIcon fontSize='large' />}
-                {weathercode === 99 && <ThunderstormOutlinedIcon fontSize='large' />}
+            <Box display='flex' justifyContent='space-between'>
+                <Typography variant='h1' fontWeight='400' p='10px 20px' borderRadius='5px' mr='5px' backgroundColor={colors.primary[500]} textAlign='center'>
+                    {weather !== '' && <span>{weather.current_weather.temperature} °F</span>}
+                </Typography>
+                <Typography p='10px 20px' borderRadius='5px' ml='5px' backgroundColor={colors.primary[500]} display='flex' alignItems='center'>
+                    {weathercode === 0 && <WbSunnyOutlinedIcon fontSize='large' />}
+                    {weathercode === 1 && <WbSunnyOutlinedIcon fontSize='large' />}
+                    {weathercode === 2 && <WbCloudyOutlinedIcon fontSize='large' />}
+                    {weathercode === 3 && <WbCloudyOutlinedIcon fontSize='large' />}
+                    {weathercode === 45 && <WbCloudyOutlinedIcon fontSize='large' />}
+                    {weathercode === 48 && <WbCloudyOutlinedIcon fontSize='large' />}
+                    {weathercode === 51 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 53 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 55 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 56 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 57 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 61 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 63 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 65 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 66 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 67 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 71 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 73 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 75 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 77 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 80 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 81 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 82 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 85 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 86 && <AcUnitOutlinedIcon fontSize='large' />}
+                    {weathercode === 95 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 96 && <ThunderstormOutlinedIcon fontSize='large' />}
+                    {weathercode === 99 && <ThunderstormOutlinedIcon fontSize='large' />}
+                </Typography>
             </Box>
         </Box>
     )

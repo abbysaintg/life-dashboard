@@ -2,9 +2,10 @@ import { Box, IconButton, Typography, useTheme } from '@mui/material'
 import { tokens } from '../../theme'
 import Header from '../global/Header'
 import Weather from './widgets/Weather'
-import Widget2 from './widgets/Widget2'
-import Widget3 from './widgets/Widget3'
+import Clock from './widgets/Clock'
+import Countdown from './widgets/Countdown'
 import Shortcuts from './widgets/Shortcuts'
+import MiniCalendar from './widgets/MiniCalendar'
 import Quote from './widgets/Quote'
 import Tasks from './widgets/tasks'
 
@@ -21,16 +22,15 @@ const Dashboard = () => {
 
             {/* GRID & CHARTS */}
             <Box display='grid' gridTemplateColumns='repeat(12, 1fr)' gridAutoRows='140px' gap='20px'>
-                
                 {/* ROW 1 */}
+                <Box gridColumn='span 3' backgroundColor={colors.primary[400]} display='flex' alignItems='center' justifyContent='center'>
+                    <Clock />
+                </Box>
                 <Box gridColumn='span 3' backgroundColor={colors.primary[400]} display='flex' alignItems='center' justifyContent='center'>
                     <Weather />
                 </Box>
                 <Box gridColumn='span 3' backgroundColor={colors.primary[400]} display='flex' alignItems='center' justifyContent='center'>
-                    <Widget2 />
-                </Box>
-                <Box gridColumn='span 3' backgroundColor={colors.primary[400]} display='flex' alignItems='center' justifyContent='center'>
-                    <Widget3 />
+                    <Countdown />
                 </Box>
                 <Box gridColumn='span 3' backgroundColor={colors.primary[400]} display='flex' alignItems='center' justifyContent='center'>
                     <Shortcuts />
@@ -47,18 +47,19 @@ const Dashboard = () => {
                     <Typography variant='h5' fontWeight='600' textAlign='center'>
                         Upcoming Events
                     </Typography>
-                    <Box display='flex' flexDirection='column' alignItems='center' mt='25px'>
+                    <MiniCalendar />
+                    {/* <Box display='flex' flexDirection='column' alignItems='center' mt='25px'>
                         <Typography variant='h5' color={colors.greenAccent[500]} sx={{ mt: '15px' }}>
                             Coming Soon
                         </Typography>
                         <Typography>.........</Typography>
-                    </Box>
+                    </Box> */}
                 </Box>
                 <Box gridColumn='span 4' gridRow='span 4' backgroundColor={colors.primary[400]} overflow='auto'>
                     <Box height='200px' p='15px' overflow='none'>
                         <iframe
                             style={{ border: 0 }}
-                            src='https://open.spotify.com/embed/playlist/37i9dQZEVXcGVGTpOpeT99?utm_source=generator'
+                            src='https://open.spotify.com/embed/playlist/37i9dQZEVXcGVGTpOpeT99?utm_source=generator&theme=0'
                             width='100%'
                             height='600px'
                             allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'

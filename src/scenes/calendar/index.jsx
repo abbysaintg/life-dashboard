@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import { formatDate } from '@fullcalendar/core'
 import dayGridPlugin from '@fullcalendar/daygrid'
@@ -13,6 +13,28 @@ const Calendar = () => {
     const theme = useTheme()
     const colors = tokens(theme.palette.mode)
     const [currentEvents, setCurrentEvents] = useState([])
+    const [calendar, setCalendar] = useState(null)
+
+    // GET EVENTS
+    useEffect(() => {
+        fetch('http://localhost:3001/events', {
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+            .then((resp) => resp.json())
+            .then((data) => setCurrentEvents(data))
+    }, [])
+
+    // RENDER EVENTS TO CALENDAR 
+    const renderEventContent = (eventInfo) => {
+        return (
+            <Typography variant='h5' fontWeight='600' textAlign='center'>
+                {eventInfo.event.title}
+            </Typography>
+        )
+    }
 
     // ADD CALENDAR EVENT
     const handleDateClick = (selected) => {
@@ -75,6 +97,7 @@ const Calendar = () => {
                 {/* CALENDAR */}
                 <Box flex='1 1 100%' ml='15px'>
                     <FullCalendar
+                        events={currentEvents}
                         height='75vh'
                         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
                         headerToolbar={{
@@ -87,31 +110,13 @@ const Calendar = () => {
                         selectable={true}
                         selectMirror={true}
                         dayMaxEvents={true}
-                        select={handleDateClick}
+                        onDateClick={handleDateClick}
+                        onEventClick={handleEventClick}
+                        eventContent={renderEventContent}
                         eventClick={handleEventClick}
-                        eventsSet={(events) => setCurrentEvents(events)}
-                        initialEvents={[
-                            {
-                                id: '12315',
-                                title: 'Project Presentation',
-                                date: '2023-01-06',
-                            },
-                            {
-                                id: '5123',
-                                title: 'Dan Birthday',
-                                date: '2023-01-14',
-                            },
-                            {
-                                id: '5123',
-                                title: 'MLK Day',
-                                date: '2023-01-16',
-                            },
-                            {
-                                id: '5123',
-                                title: 'Groundhog Day',
-                                date: '2023-02-02',
-                            },
-                        ]}
+                        eventsSet={(calendar) => {
+                            setCalendar(calendar)
+                        }}
                     />
                 </Box>
             </Box>
