@@ -48,7 +48,7 @@ function NewTaskForm({ categories, newTaskSubmit }) {
                 borderRadius: '10px',
                 backgroundColor: colors.greenAccent[800],
             }}>
-            <FormControl sx={{ mr: "5px", minWidth: 120 }}>
+            <FormControl sx={{ mr: '5px', minWidth: 120 }}>
                 <InputLabel>Category</InputLabel>
                 <Select name='category' value={newTask.category} onChange={handleChange}>
                     <MenuItem value='All'>All</MenuItem>

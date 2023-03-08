@@ -1,5 +1,5 @@
 {
-  "name": "react-dashboard",
+  "name": "life-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,7 +51,7 @@
     ]
   },
   "devDependencies": {
-    "webpack-cli": "^5.0.1",
+    "webpack-cli": "4.x.x",
     "webpack-dev-server": "^4.11.1"
   }
 }
